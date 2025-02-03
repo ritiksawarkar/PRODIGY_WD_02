@@ -1,0 +1,159 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    margin: 0;
+    transition: background 0.3s ease;
+}
+
+/* Stopwatch Container Styling */
+.stopwatch-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Time Display Styling */
+.time-display {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Group Styling */
+.controls button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Button Base Styling */
+.controls button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Start/Stop Button Styling */
+.controls button#startStopBtn {
+    background-color: #4CAF50;
+}
+
+/* Reset Button Styling */
+.controls button#resetBtn {
+    background-color: #FF5733;
+}
+
+/* Lap Button Styling */
+.controls button#lapBtn {
+    background-color: #00BCD4;
+}
+
+/* Dark Mode Button Styling */
+.controls button#darkModeBtn {
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Hover Effects for Buttons */
+.controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:active {
+    transform: translateY(1px);
+}
+
+/* Lap Times Styling */
+.lap-times {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+    max-height: 200px;
+    /* Set a maximum height for the lap times container */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+.lap-times ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lap-times li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.lap-times li span {
+    font-weight: bold;
+}
+
+/* Add scrollbar styling for better UI (optional) */
+.lap-times::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lap-times::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.lap-times::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 500px) {
+    .stopwatch-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .time-display {
+        font-size: 2.5em;
+    }
+
+    .controls button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* 
+        element.style {
+            color: none !important;
+            background-color: none !important;
+        } */
